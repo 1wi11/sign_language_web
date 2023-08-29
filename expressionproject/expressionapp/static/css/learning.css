@@ -1,0 +1,281 @@
+body{
+    background-color:#010101;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+.outer {
+    font-family: 'Avenir', sans-serif;
+    background-color: #000;
+    font-size: 20px;
+    width: 100%;
+    position: relative; /* 부모 요소를 relative로 설정 */
+}
+.inner {
+    position: absolute; /* inner를 절대 위치로 설정 */
+    top: 0; /* 상단으로 위치 */
+    left: 0; /* 왼쪽으로 위치 */
+    width: 100%;
+    height: 50px;
+}
+.name1{
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+h1{
+    color:#fff;
+    font-size:2.5rem;
+    margin: 0 30px;
+}
+.nav {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right:0;
+}
+.nav li {
+    margin-right: 20px;
+}
+
+.nav a {
+    color:#fff;
+    text-decoration: none;
+    font-size:1.5rem;
+    font-weight:bold;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #fff;
+    margin: 100px 50px;
+    border-radius: 50px;
+}
+.square-box1 {
+    position: relative;
+    width: 800px; /* square-box1의 너비를 설정 */
+    height: 450px; /* square-box1의 높이를 컨테이너의 높이와 같게 설정 */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    position: relative; /* square-box1을 기준으로 video를 위치시키기 위해 설정 */
+    background-color: gray;
+}
+.title1 {
+    position: absolute; /* "container"를 기준으로 위치를 조정하기 위해 절대 위치로 설정 */
+    top: 0; /* 맨 위에 위치 */
+    left: 0; /* 맨 좌측에 위치 */
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 10px 130px; /* 상단과 좌측 여백 설정 */
+}
+h7{
+    color:#000;
+    font-size:2rem;
+}
+.options{
+  position:fixed;
+  top:15%;
+  right:3%;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin:10px 80px;
+}
+.tabs {
+  display: flex;
+  position: relative;
+  background-color: lightgrey;
+  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+  padding: 0.75rem;
+  border-radius: 99px;
+}
+.tabs * {
+  z-index: 2;
+}
+.options input[type="radio"] {
+  display: none;
+}
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 50px;
+  font-size: .8rpx;
+  color: black;
+  font-weight: 500;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+}
+.options input[type="radio"]:checked + label {
+  color: #185ee0;
+}
+.options input[id="radio-1"]:checked ~ .glider {
+  transform: translateX(0);
+}
+
+.options input[id="radio-2"]:checked ~ .glider {
+  transform: translateX(100%);
+}
+.glider {
+  position: absolute;
+  display: flex;
+  height: 30px;
+  width: 50px;
+  background-color: #e6eef9;
+  z-index: 1;
+  border-radius: 99px;
+  transition: 0.25s ease-out;
+}
+.day{
+    position: absolute; /* "container"를 기준으로 위치를 조정하기 위해 절대 위치로 설정 */
+    top: 40%; /* "container"의 세로 중앙 위치에서 떨어진 거리 */
+    left: 0; /* 왼쪽에 위치 */
+    transform: translateY(-50%); /* 세로 중앙 정렬을 위해 위치 조정 */
+    display: flex;
+    list-style: none;
+    text-align: middle;
+    margin: 0 100px;
+  }
+.input-type{
+    position: absolute; /* "container"를 기준으로 위치를 조정하기 위해 절대 위치로 설정 */
+    top: 40%; /* "container"의 세로 중앙 위치에서 떨어진 거리 */
+    left: 0; /* 왼쪽에 위치 */
+    transform: translateY(-50%); /* 세로 중앙 정렬을 위해 위치 조정 */
+    display: flex;
+    list-style: none;
+    text-align: middle;
+    margin: 30px 100px;
+}
+.video {
+    width: 100%; /* square-box1의 너비와 같게 설정 */
+    height: 100%; /* square-box1의 높이와 같게 설정 */
+    object-fit: cover;
+}
+.word-number {
+    position: absolute; /* "container"를 기준으로 위치를 조정하기 위해 절대 위치로 설정 */
+    top: 40%; /* "container"의 세로 중앙 위치에서 떨어진 거리 */
+    right: 2%; /* 오른쪽에 위치 */
+    transform: translateY(-50%); /* 세로 중앙 정렬을 위해 위치 조정 */
+    display: flex;
+    list-style: none;
+    text-align: middle;
+    margin: 0 120px;
+}
+.sentence-number {
+    position: absolute; /* "container"를 기준으로 위치를 조정하기 위해 절대 위치로 설정 */
+    top: 40%; /* "container"의 세로 중앙 위치에서 떨어진 거리 */
+    right: 2%; /* 오른쪽에 위치 */
+    transform: translateY(-50%); /* 세로 중앙 정렬을 위해 위치 조정 */
+    display: flex;
+    list-style: none;
+    text-align: middle;
+    margin: 0 120px;
+}
+.start{
+    position: absolute; /* "container"를 기준으로 위치를 조정하기 위해 절대 위치로 설정 */
+    top: 25%; /* "container"의 세로 중앙 위치에서 떨어진 거리 */
+    right: 4%; /* 오른쪽에 위치 */
+    transform: translateY(-50%); /* 세로 중앙 정렬을 위해 위치 조정 */
+    display: flex;
+    list-style: none;
+    text-align: middle;
+    margin: 0 100px;
+}
+.video-number{
+    position: absolute; /* "container"를 기준으로 위치를 조정하기 위해 절대 위치로 설정 */
+    top: 27%; /* "container"의 세로 중앙 위치에서 떨어진 거리 */
+    right: 2%; /* 오른쪽에 위치 */
+    transform: translateY(-50%); /* 세로 중앙 정렬을 위해 위치 조정 */
+    display: flex;
+    list-style: none;
+    text-align: middle;
+    margin: 30px 100px;
+}
+#webcam{
+  width: 100%; /* square-box1의 너비와 같게 설정 */
+  height: 100%; /* square-box1의 높이와 같게 설정 */
+  object-fit: cover;
+  display: none;/* 기본적으로 숨김 */
+  transform: scaleX(-1);
+}
+.result{
+  position: absolute; /* "container"를 기준으로 위치를 조정하기 위해 절대 위치로 설정 */
+  top: 70%; /* "container"의 세로 중앙 위치에서 떨어진 거리 */
+  right: 3.5%; /* 오른쪽에 위치 */
+  transform: translateY(-50%); /* 세로 중앙 정렬을 위해 위치 조정 */
+  display: flex;
+  list-style: none;
+  text-align: middle;
+  margin: 30px 100px;
+}
+.return{
+  position: absolute; /* "container"를 기준으로 위치를 조정하기 위해 절대 위치로 설정 */
+  top: 70%; /* "container"의 세로 중앙 위치에서 떨어진 거리 */
+  right: 3.5%; /* 오른쪽에 위치 */
+  transform: translateY(-50%); /* 세로 중앙 정렬을 위해 위치 조정 */
+  display: flex;
+  list-style: none;
+  text-align: middle;
+  margin: 30px 100px;
+}
+.answer{
+  position: absolute; /* "container"를 기준으로 위치를 조정하기 위해 절대 위치로 설정 */
+  top: 40%; /* "container"의 세로 중앙 위치에서 떨어진 거리 */
+  left: 3%; /* 왼쪽에 위치 */
+  transform: translateY(-50%); /* 세로 중앙 정렬을 위해 위치 조정 */
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin: 30px 100px;
+}
+.myvideo{
+  position: absolute; /* "container"를 기준으로 위치를 조정하기 위해 절대 위치로 설정 */
+  top: 30%; /* "container"의 세로 중앙 위치에서 떨어진 거리 */
+  left: 2.5%; /* 왼쪽에 위치 */
+  transform: translateY(-50%); /* 세로 중앙 정렬을 위해 위치 조정 */
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin: 30px 100px;
+}
+.timer{
+  position: absolute; /* "container"를 기준으로 위치를 조정하기 위해 절대 위치로 설정 */
+  top: 45%; /* "container"의 세로 중앙 위치에서 떨어진 거리 */
+  right: 4%; /* 오른쪽에 위치 */
+  transform: translateY(-50%); /* 세로 중앙 정렬을 위해 위치 조정 */
+  display: flex;
+  list-style: none;
+  text-align: middle;
+  margin: 30px 100px;
+  font-size:4rem;
+}
+#recorded-video{
+  width: 100%; /* square-box1의 너비와 같게 설정 */
+  height: 100%; /* square-box1의 높이와 같게 설정 */
+  object-fit: cover;
+  display: none;/* 기본적으로 숨김 */
+}
+.score{
+  position: absolute; /* "container"를 기준으로 위치를 조정하기 위해 절대 위치로 설정 */
+  top: 30%; /* "container"의 세로 중앙 위치에서 떨어진 거리 */
+  right: 3%; /* 오른쪽에 위치 */
+  transform: translateY(-50%); /* 세로 중앙 정렬을 위해 위치 조정 */
+  display: none;
+  list-style: none;
+  text-align: middle;
+  margin: 30px 100px;
+  font-size:3rem;
+}
