@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <title>나비효과</title>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner">
+      <div class="name1">
+        <h1>Butterfly</h1>
+      </div>
+      <ul class="nav">
+        <li><a href="#" id="homeButton">HOME</a></li>
+        <li><a href="#" id="LearningButton">LEARNING</a></li>
+        <li><a href="#" id="aboutButton">ABOUT US</a></li>
+      </ul>
+    </div>
+    <div class="intro_image">
+      <img id="introImage" src="{% static 'image/main1.jpg' %}" alt="Intro Image">
+    </div>          
+  </div>
+  <script src="{% static 'js/inner.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+body{
+    background-color:#010101;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+.outer {
+    font-family: 'Avenir', sans-serif;
+    background-color: #000;
+    font-size: 20px;
+    width: 100%;
+    position: relative; /* 부모 요소를 relative로 설정 */
+}
+.inner {
+    position: absolute; /* inner를 절대 위치로 설정 */
+    top: 0; /* 상단으로 위치 */
+    left: 0; /* 왼쪽으로 위치 */
+    width: 100%;
+    height: 50px;
+}
+.name1{
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+h1{
+    color:#fff;
+    font-size:2.5rem;
+    margin: 0 30px;
+}
+.nav {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right:0;
+}
+.nav li {
+    margin-right: 20px;
+}
+
+.nav a {
+    color:#fff;
+    text-decoration: none;
+    font-size:1.5rem;
+    font-weight:bold;
+}
+.intro_text{
+    display: flex;
+    flex-direction: column; /* 자식 요소들을 세로로 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    margin: 50px auto; /* 아이콘들과의 간격을 위해 하단 여백 추가 */
+}
+h3{
+    color:#fff;
+    font-size:2rem;
+    text-align: center;
+}
+.square-box {
+    display:flex;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto; 
+}
+
+.title-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    line-height: 2;
+}
+h4 {
+    color: #000;
+    margin:10px;    
+}
+.intro_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+} 
+.icons {
+    display: flex;
+    width: 96%;
+    max-width: 100%; /* 최대 너비를 100%로 설정 */
+    margin: auto;
+    background: #000;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:0;
+    padding:0;
+}
+.icons > li {
+    flex: 1;
+    height: 302px;
+    margin-top: 20px;
+    text-align: center;
+}
+.icons > li > .icons_img {
+    margin-top: 18px;
+    max-width: 100%; /* 최대 너비를 100%로 설정하여 반응형으로 크기 조절 */
+    height: auto; /* 높이를 자동으로 조절하여 가로 세로 비율 유지 */
+}
+.icons > li:not(:last-child) {
+    margin-right: 0px;
+}
+.icons .h5 {
+    width: 100%;
+    margin: auto;
+    letter-spacing: -1px;
+    color: #fff;
+}
+h5 {
+    font-size: 15px;
+    font-weight: 100;
+    color: #fff;
+}
+.icon_img{
+    width: 100%; /* 이미지를 감싸는 div의 너비를 100%로 설정합니다. */
+    height: 200px; /* 이미지를 감싸는 div의 높이를 조정합니다. */
+}
+.icon_img img{
+    max-width: 100%; /* 이미지의 최대 너비를 100%로 설정하여 반응형으로 크기 조절합니다. */
+    max-height: 100%; /* 이미지의 최대 높이를 100%로 설정하여 가로 세로 비율 유지합니다. */
+}
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .intro_text{
+        margin:50px auto;
+    }
+    .square-box {
+        max-width: 100%; /* 최대 너비를 100%로 설정 */
+    }
+    h4 {
+        font-size: 10px; /* 화면이 작아질 때 h4의 폰트 크기를 10px로 설정 */
+    }
+    .icons {
+        flex-wrap: wrap; /* 요소들을 한 줄에 하나씩 출력하도록 감싸기 설정 */
+    }
+
+    .icons > li {
+        flex-basis: 100%; /* 한 줄에 하나씩 출력하도록 각 li 요소의 기본 크기를 100%로 설정 */
+    }
+    .icons > li > .icon_img {
+        margin-top: 0; /* 세로로 변경되었으므로 불필요한 상단 마진을 제거합니다. */
+        height: auto; /* 높이를 자동으로 조절하여 세로로 배치합니다. */
+    }
+
+    .icons .h5 {
+        margin-top:10px; /* 제목과 사진 사이의 간격을 조정합니다. */
+    }
+}

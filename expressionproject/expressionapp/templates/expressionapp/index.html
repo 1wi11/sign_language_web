@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/learning.css' %}">
+    <title>LEARNING</title>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <div class="name1">
+                <h1>LEARNING</h1>
+            </div>
+            <ul class="nav">
+                <li><a href="#" id="homeButton">HOME</a></li>
+                <li><a href="#" id="LearningButton">LEARNING</a></li>
+                <li><a href="#" id="aboutButton">ABOUT US</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="title1">
+                <h7>학습</h7>
+            </div>
+            <div class="options">
+                <div class="tabs">
+                    <input type="radio" id="radio-1" name="tabs" checked="">
+                    <label class="tab" for="radio-1">학습</label>
+                    <input type="radio" id="radio-2" name="tabs">
+                    <label class="tab" for="radio-2">연습</label>
+                </div>
+            </div>
+            <div class="day">
+                <label for="day">학습일차:</label>
+                <select id="day" name="day">
+                    <option value="1">1일차</option>
+                    <option value="2">2일차</option>
+                    <option value="3">3일차</option>
+                    <!-- Add more options up to 30 -->
+                </select>
+            </div>
+            <div class="word-number">
+                <label for="word-number">단어 선택:</label>
+                <select id="word-number" name="word-number">
+                  <option value="1" selected>1번</option>
+                  <option value="2">2번</option>
+                  <option value="3">3번</option>
+                  <option value="4">4번</option>
+                  <option value="5">5번</option>
+                  <option value="6">6번</option>
+                  <option value="7">7번</option>
+                  <option value="8">8번</option>
+                  <option value="9">9번</option>
+                  <option value="10">10번</option>
+                  <option value="11">11번</option>
+                  <option value="12">12번</option>
+                  <option value="13">13번</option>
+                  <option value="14">14번</option>
+                  <option value="15">15번</option>
+                  <option value="16">16번</option>
+                  <option value="17">17번</option>
+                  <option value="18">18번</option>
+                  <option value="19">19번</option>
+                  <option value="20">20번</option>
+                </select>
+            </div>
+            <div class="sentence-number" style="display: none;">
+                <label for="sentence-number">문장 선택:</label>
+                <select id="sentence-number" name="sentence-number">
+                    <option value="1" selected>1번</option>
+                    <option value="2">2번</option>
+                    <option value="3">3번</option>
+                    <option value="4">4번</option>
+                    <option value="5">5번</option>
+                    <option value="6">6번</option>
+                    <option value="7">7번</option>
+                    <option value="8">8번</option>
+                    <option value="9">9번</option>
+                    <option value="10">10번</option>
+                </select>
+            </div>
+            <div class="input-type">
+                <label for="learning">단어</label>
+                <input type="radio" id="learning" name="mode" value="learning" checked>
+                <label for="practice">문장</label>
+                <input type="radio" id="practice" name="mode" value="practice">
+            </div>
+            <div class="square-box1">
+                <div class="video"></div>
+                <video id="webcam" autoplay playsinline></video>
+                <video id="recorded-video" controls></video>
+            </div>
+            <p class="video-number">
+                영상 번호: 
+            </p>
+            <div class="start">
+                <button onclick="startWebcam()">시작</button>
+            </div>
+            <div class="timer">
+                <div id = "timer">10</div>
+            </div>
+            <div class="result">
+                <button id="resultButton">결과 보기</button>
+            </div>
+            <div class="return">
+                <button id="returnButton">돌아가기</button>
+            </div>
+            <div class="answer">
+                <button id="answerButton">정답</button>
+            </div>
+            <div class="myvideo">
+                <button id="myvideoButton">내 영상</button>
+            </div>
+            <div class="score">
+                <span id="score">0</span>%
+            </div>
+        </div>
+    </div>
+    <script>    
+        webcam();
+        
+    </script>
+    <script src="{% static 'js/inner.js' %}"></script>
+    <script src="{% static 'js/learning.js' %}"></script>
+    <script>
+        const videoSrc = "{% static 'video/word/word' %}"
+    </script>
+</body>
+</html>

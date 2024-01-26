@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about_us.css' %}">
+    <title>Developer</title>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <div class="name1">
+                <h1>Developer</h>
+            </div>
+            <ul class="nav">
+                <li><a href="#" id="homeButton">HOME</a></li>
+                <li><a href="#" id="LearningButton">LEARNING</a></li>
+                <li><a href="#" id="aboutButton">ABOUT US</a></li>
+            </ul>
+            <div class="intro_text">
+                <h3>Our Story</h3>
+                <div class="square-box">
+                    <div class="title-box">
+                      <h4>나비 효과는 어느 한 곳에서 일어난 작은 나비의 날갯짓이 심지어 뉴욕에 태풍을 일으킬 수 있다는 이론입니다.
+                      <br>마찬가지로, 수화를 습득하기 위해서는 다양한 단어와 문장들을 학습하는 것이 필수적입니다.
+                      <br>우리가 제공하는 600개의 단어와 200개의 문장은 당신이 수화를 습득하는 것에 작은 날개짓이 될 것입니다.
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="main_text0">
+            <ul class="icons">
+                <li>
+                    <div class="icon_img">
+                        <img src="{% static 'image/icon1.jpg' %}">
+                    </div>
+                    <div class="contents_bold">
+                        <h5>이름: 박정진
+                            <br>메일: abcdefg@naver.com
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon_img">
+                        <img src="{% static 'image/icon2.jpg' %}">
+                    </div>
+                    <div class="contents_bold">
+                        <h5>이름: 최초인
+                            <br>메일: abcdefg@naver.com
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon_img">
+                        <img src="{% static 'image/icon3.jpg' %}">
+                    </div>
+                    <div class="contents_bold">
+                        <h5>이름: 이재준
+                            <br>메일: abcdefg@naver.com
+                        </h5>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="{% static 'js/inner.js' %}"></script>
+</body>
+</html>
